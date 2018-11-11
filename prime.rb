@@ -1,6 +1,14 @@
 # Add  code here!
 def prime?(num)
-  array = [1..num]
-  array.each do |factor|
-    if factor == 
+  if num < 2
+    return false
+  end
+
+  (2...num).each do |factor|
+    if num % factor == 0
+      return false
+    end
+  end
+
+  return true
 end
